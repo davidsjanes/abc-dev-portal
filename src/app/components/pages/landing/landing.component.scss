@@ -1,0 +1,67 @@
+@import '../pages-shared.scss';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.signup {
+    background-image: url("../../../../assets/images/abstract-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 12rem;
+        padding: 2rem 12rem;
+    }
+    &__copy {
+        padding: 1rem 0;
+    }
+    &__title {
+        font-size: 4.2rem;
+        font-variation-settings: "wght" 200;
+        color: #003164;
+    }
+    &__card {
+        width: 100%;
+        min-width: 48rem;
+    }
+    &__form-title {
+        margin: 0;
+        font-size: 2.2rem;
+        font-variation-settings: "wght" 300;
+    }
+}
+
+.card {
+    &__header {
+        padding: 4rem 4rem 0 4rem;
+        margin: 0;
+    }
+    &__body {
+        padding: 2rem 4rem 3rem 4rem;
+    }
+    &__footer {
+        background-color: #f4f5f6;
+        justify-content: center;
+        padding: 2rem 6rem;
+        margin: 0;
+    }
+}
+
+.form {
+    &__row {
+        display: flex;
+        gap: 1.5rem;
+    }
+    &__group {
+        flex: 1;
+    }
+}

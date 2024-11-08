@@ -1,0 +1,74 @@
+:host {
+    flex: 1;
+    width: 100%;
+    height: auto;
+}
+
+.page {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__tabs {
+        border-bottom: 1px solid #ccc;
+    }
+    &__list {
+        border: 1px solid #d9dce1;
+        border-radius: 4px;
+        background-color: #fff;
+        overflow: hidden;
+        border-top: 2px solid #217AB5;
+    }
+    &__filters {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        border-radius: 4px;
+        & .form__group {
+            padding: 0;
+        }
+        & .actions, & .filters {
+            display: flex;
+            flex: 1;
+            gap: 1.5rem;
+        }
+        & .actions {
+            flex: none;
+        }
+        & .search {
+            width: 100%;
+            max-width: 32rem;
+        }
+        & .filters {
+            &__icon {
+                width: 2rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        padding: 3rem 2rem
+    }
+}
+

@@ -1,0 +1,12 @@
+<ul class="site-nav" [ngClass]="{'is-compact': isCompact === true}">
+    <li class="site-nav__item">
+        <a class="site-nav__link" [routerLink]="['/page', { outlets: { page: ['home'] } }]" routerLinkActive="is-active" ariaCurrentWhenActive="page">
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/home.svg" alt="Home">
+                </span>
+                <span class="site-nav__text">My Apps</span>
+            </div>
+        </a>
+    </li>
+</ul>
