@@ -1,3 +1,18 @@
-<div class="page">
-    <h1>Home Page Goes Here!</h1>
+<div class="page home">
+    <div class="page__container">
+        <div class="page__header home">
+            <h1>Manage Applications</h1>
+        </div>
+        <div class="page__body">
+            <div class="page__filters">
+                <div class="page__filters-section">
+                    <button class="btn btn--small btn--outline" (click)="openProductionRequest()">Production Request</button>
+                </div>
+                <div class="page__filters-section">
+                    <button class="btn btn--small btn--primary" (click)="openNewApp()">Create New App</button>
+                </div>
+            </div>
+            <app-manage-table></app-manage-table>
+        </div>
+    </div>
 </div>

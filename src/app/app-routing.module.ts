@@ -4,6 +4,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { PageComponent } from './components/pages/page/page.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
+import { AccountComponent } from './components/pages/account/account.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
       path: 'home',
       outlet: 'page',
       component: HomeComponent
+    },
+    {
+      path: 'account',
+      outlet: 'page',
+      component: AccountComponent
     }]
   }
 ];

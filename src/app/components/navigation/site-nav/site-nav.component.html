@@ -3,9 +3,19 @@
         <a class="site-nav__link" [routerLink]="['/page', { outlets: { page: ['home'] } }]" routerLinkActive="is-active" ariaCurrentWhenActive="page">
             <div class="site-nav__group">
                 <span class="site-nav__icon">
-                    <img src="../../../assets/icons/home.svg" alt="Home">
+                    <img src="../../../assets/icons/cog-white.svg" alt="Manage Apps">
                 </span>
-                <span class="site-nav__text">My Apps</span>
+                <span class="site-nav__text">Manage Apps</span>
+            </div>
+        </a>
+    </li>
+    <li class="site-nav__item">
+        <a class="site-nav__link" [routerLink]="['/page', { outlets: { page: ['account'] } }]" routerLinkActive="is-active" ariaCurrentWhenActive="page">
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/user-white.svg" alt="Account">
+                </span>
+                <span class="site-nav__text">Account</span>
             </div>
         </a>
     </li>
