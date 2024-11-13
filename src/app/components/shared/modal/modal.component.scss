@@ -1,0 +1,51 @@
+:host {
+    z-index: 500;
+}
+
+.modal {
+    display: block;
+    &__top-bar {
+        background-color: #003e7e;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1.5rem 2rem;
+    }
+    &__header {
+        height: 6rem;
+    }
+    &__content {
+        padding: 3rem;
+    }
+    &__title {
+        font-weight: 400;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+    }
+    &__body {
+        background-color: #fff;
+    }
+    &__footer {
+        & .btn-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+        & .btn-group .btn+.btn {
+            margin-left: 0;
+        }
+    }
+    &--small {
+        & .modal__content {
+            max-width: 48rem;
+        }
+    }
+}
+
+.panel {
+    animation: none !important;
+    & .modal__body {
+        background-color: #f5f6f7;
+        padding: 2rem;
+    }
+    & .modal__content {
+        padding: 0;
+    }
+}
