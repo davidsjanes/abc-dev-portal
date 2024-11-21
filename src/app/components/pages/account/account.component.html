@@ -1,10 +1,42 @@
 <div class="page account">
     <div class="page__container">
-        <div class="page__header home">
+        <div class="page__header">
             <h1>Account</h1>
         </div>
         <div class="page__body">
-            
+            <form class="account__form" action="">
+                <div class="form__group">
+                    <label class="form__label" for="formFirstName">First Name</label>
+                    <input class="form__element" type="text" id="formFirstName" placeholder="First Name" value="David">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formLastName">Last Name</label>
+                    <input class="form__element" type="text" id="formLastName" placeholder="Last Name" value="Janes">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formEmail">Email</label>
+                    <input class="form__element" type="email" id="formEmail" placeholder="Email" value="myemail@email.com">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formAddress">Address</label>
+                    <input class="form__element" type="text" id="formAddress" placeholder="Address" value="1234 Anywhere St.">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formPhone">Phone</label>
+                    <input class="form__element" type="text" id="formPhone" placeholder="Phone" value="555-555-1234">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formCompany">Company</label>
+                    <input class="form__element" type="text" id="formCompany" placeholder="Company" value="ABC Roofing">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formPassword">Password</label>
+                    <input class="form__element" type="password" id="formPasswod" placeholder="Password" value="thisisasecretpassword">
+                </div>
+                <div class="form__group">
+                    <a class="btn btn--primary btn--expanded u-m-t-10" [routerLink]="['/page', { outlets: { page: ['home'] } }]">Save Changes</a>
+                </div>
+            </form>
         </div>
     </div>
 </div>
