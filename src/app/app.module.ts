@@ -27,6 +27,7 @@ import { ProdRequestComponent } from './components/pages/home/prod-request/prod-
 import { ManageTableComponent } from './components/pages/home/manage-table/manage-table.component';
 import { ManageAppComponent } from './components/pages/home/manage-app/manage-app.component';
 import { DeleteConfirmComponent } from './components/pages/home/manage-app/delete-confirm/delete-confirm.component';
+import { DocumentationComponent } from './components/pages/documentation/documentation.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { DeleteConfirmComponent } from './components/pages/home/manage-app/delet
     ProdRequestComponent,
     ManageTableComponent,
     ManageAppComponent,
-    DeleteConfirmComponent
+    DeleteConfirmComponent,
+    DocumentationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,355 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Partners - Authentication Process",
+    "version": "1.0"
+  },
+  "host": "partners.abcsupply.com",
+  "basePath": "/api/authentication/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/authenticate": {
+      "get": {
+        "description": "Authentication endpoint allows user to authenticate a connect partner is authorized for the provided shipTo or branch",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceSystemCode",
+            "description": "The source system code from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "userGuid",
+            "description": "The user guid from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "authenticateBranch",
+            "description": "The branch number to authenticate against the user account",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "authenticateShipTo",
+            "description": "The ship-to number to authenticate against the user account",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "authenticateBillTo",
+            "description": "The bill-to number to authenticate against the user account",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/type"
+            }
+          }
+        },
+        "security": [
+          {
+            "securitySchemes.OAuth2": []
+          }
+        ]
+      }
+    },
+    "/branches": {
+      "get": {
+        "description": "Retrieve the branches available to the Connect Partner based on their souce system code or user guid",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceSystemCode",
+            "description": "The source system code from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "userGuid",
+            "description": "The user guid from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/type_1"
+            }
+          }
+        },
+        "security": [
+          {
+            "securitySchemes.OAuth2": []
+          }
+        ]
+      }
+    },
+    "/shipTo": {
+      "get": {
+        "description": "Get the Ship-Tos for a Connect Partner based on their souce system code or user guid. Allows for the inclusion of branches in the response with a query parameter",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceSystemCode",
+            "description": "The source system code from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "userGuid",
+            "description": "The user guid from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "branches",
+            "description": "Whether to include list of branches in response",
+            "required": false,
+            "in": "query",
+            "default": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/type_2"
+            }
+          }
+        },
+        "security": [
+          {
+            "securitySchemes.OAuth2": []
+          }
+        ]
+      }
+    },
+    "/billTo": {
+      "get": {
+        "description": "Get the Bill-Tos for a Connect Partner based on their souce system code or user guid. Allows for the inclusion of branches in the response with a query parameter",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sourceSystemCode",
+            "description": "The source system code from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "userGuid",
+            "description": "The user guid from OKTA authorization",
+            "required": false,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/type_3"
+            }
+          }
+        },
+        "security": [
+          {
+            "securitySchemes.OAuth2": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "type": {
+      "type": "object",
+      "required": [
+        "isShipToAuthenticated",
+        "isBranchAuthenticated"
+      ],
+      "properties": {
+        "isShipToAuthenticated": {
+          "example": true,
+          "type": "boolean"
+        },
+        "isBranchAuthenticated": {
+          "example": false,
+          "type": "boolean"
+        }
+      }
+    },
+    "type_1": {
+      "type": "object",
+      "required": [
+        "branches"
+      ],
+      "properties": {
+        "branches": {
+          "example": [
+            "123",
+            "7405",
+            "214",
+            "7488"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "type_2": {
+      "type": "object",
+      "required": [
+        "shipTos",
+        "branches"
+      ],
+      "properties": {
+        "shipTos": {
+          "example": [
+            "622",
+            "7395",
+            "7484"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "branches": {
+          "example": [
+            "123",
+            "7405",
+            "214",
+            "7488"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "type_3": {
+      "type": "object",
+      "required": [
+        "billTos"
+      ],
+      "properties": {
+        "billTos": {
+          "example": [
+            "622",
+            "7395",
+            "7484"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "securitySchemes.OAuth2": {
+      "type": "oauth2",
+      "description": "Apply the OAuth 2.0 security policy to resource methods for authenticating API requests",
+      "x-amf-describedBy": {
+        "headers": {
+          "Authorization": {
+            "description": "Used to send a valid OAuth 2 access token.\n",
+            "type": "string"
+          }
+        },
+        "responses": {
+          "401": {
+            "description": "Bad or expired token. This can happen if the API consumer uses a revoked or expired access token. To fix, you should re-authenticate the user.\n",
+            "headers": {
+              "Content-Type": {
+                "description": "content-type header",
+                "type": "string"
+              }
+            },
+            "body": {
+              "application/json": {
+                "example": {
+                  "errorMessage": "Required credentials are missing or invalid"
+                },
+                "properties": {
+                  "errorMessage": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Bad OAuth request (wrong consumer key, bad nonce, expired timestamp...). Unfortunately, re-authenticating the user won't help here.\n",
+            "headers": {
+              "Content-Type": {
+                "description": "content-type header",
+                "type": "string"
+              }
+            },
+            "body": {
+              "application/json": {
+                "example": {
+                  "errorMessage": "Access to the requested resource was denied"
+                },
+                "properties": {
+                  "errorMessage": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

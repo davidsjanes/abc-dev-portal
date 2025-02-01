@@ -5,6 +5,7 @@ import { PageComponent } from './components/pages/page/page.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
 import { AccountComponent } from './components/pages/account/account.component';
+import { DocumentationComponent } from './components/pages/documentation/documentation.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
       path: 'account',
       outlet: 'page',
       component: AccountComponent
+    },
+    {
+      path: 'documentation',
+      outlet: 'page',
+      component: DocumentationComponent
     }]
   }
 ];
