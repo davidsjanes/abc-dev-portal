@@ -103,6 +103,17 @@ a {
     &__append {
         padding: 0;
     }
+    &__desc {
+        display: block;
+        font-size: 1.3rem;
+        color: #627181;
+        margin: 0 0 .5rem 0;
+    }
+    &__label {
+        &.has-desc {
+            margin-bottom: .2rem;
+        }
+    }
 }
 
 .modal-backdrop {
