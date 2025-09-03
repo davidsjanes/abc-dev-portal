@@ -38,6 +38,10 @@
         font-size: 2.2rem;
         font-variation-settings: "wght" 300;
     }
+    &__form {
+        // temporary styles until there is a signup form
+        min-height: 64rem;
+    }
 }
 
 .card {
