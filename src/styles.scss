@@ -114,6 +114,19 @@ a {
             margin-bottom: .2rem;
         }
     }
+    &__sub-group {
+        width: 100%;
+    }
+    &__multiple {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    &__additional {
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 .modal-backdrop {
