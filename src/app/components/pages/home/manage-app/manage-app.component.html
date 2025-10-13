@@ -48,9 +48,27 @@
             <label class="form__label" for="formURL">Application URL</label>
             <input class="form__element" type="text" id="formURL" placeholder="Application URL" value="https://www.myappisawesome.com">
         </div>
-        <div class="form__group">
-            <label class="form__label" for="formAuth">OAuth 2.0 Redirect URIs</label>
-            <input class="form__element" type="text" id="formAuth" placeholder="OAuth 2.0 Redirect URIs" value="Unclear what this should be...">
+        <div class="form__group form__multiple">
+            <div class="form__sub-group">
+                <label class="form__label" for="formAuth">OAuth 2.0 Redirect URIs</label>
+                <input class="form__element" type="text" id="formAuth" placeholder="OAuth 2.0 Redirect URIs" value="URI goes here...">
+            </div>
+            <div class="form__sub-group form__additional">
+                <input class="form__element" type="text" id="formAuth2" placeholder="OAuth 2.0 Redirect URIs" value="Additional has been added...">
+                <button class="btn btn--outline btn--icon btn--danger"><img class="icon" src="../../../../../assets/icons/icon-trash.svg" /></button>
+            </div>
+            <button class="btn btn--text u-p-0">Add Additional</button>
+        </div>
+        <div class="form__group form__multiple">
+            <div class="form__sub-group">
+                <label class="form__label" for="formEmail">Application Owner Email</label>
+                <input class="form__element" type="email" id="formEmail" placeholder="Application Owner Email" value="testemail@email.com">
+            </div>
+            <div class="form__sub-group form__additional">
+                <input class="form__element" type="email" id="formEmail2" placeholder="Application Owner Email" value="anotheremail@email.com">
+                <button class="btn btn--outline btn--icon btn--danger"><img class="icon" src="../../../../../assets/icons/icon-trash.svg" /></button>
+            </div>
+            <button class="btn btn--text u-p-0">Add Additional</button>
         </div>
     </form>
     <button class="btn btn--small btn--expanded btn--danger" (click)="openDeleteConfirm()">Delete App</button>
