@@ -1,0 +1,24 @@
+@import '../login/login.component.scss';
+
+.card {
+    &__footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.form {
+    &__label {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        border: 1px solid rgb(231, 233, 236);
+        transition: border-color .25s ease;
+    }
+    &__radio {
+        &:checked + .form__label {
+            border-color: rgb(33, 122, 181);
+            border-radius: 4px;
+        }
+    }
+}

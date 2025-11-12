@@ -1,0 +1,15 @@
+<div class="login link-accounts">
+    <div class="login__card card card--depth-4">
+        <div class="card__header">
+            <h3 class="login__heading">Connect myABC Account</h3>
+            <span class="login__sub-heading">We have detected that you have a myABC account, would you like to link to this account now?</span>
+        </div>
+        <div class="card__body">
+            <img src="../../../../../assets/icons/link-icon.svg" alt="Link Accounts" class="link-accounts__image"/>
+        </div>
+        <div class="card__footer">
+             <a class="btn btn--primary btn--expanded" [routerLink]="['/signup', { outlets: { login: ['org-select'] } }]">Connect Accounts</a>
+             <a class="btn btn--text btn--cancel" [routerLink]="['/signup', { outlets: { login: ['login'] } }]">Cancel</a>
+        </div>
+    </div>
+</div>

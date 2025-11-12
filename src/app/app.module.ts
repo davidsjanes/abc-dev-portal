@@ -16,7 +16,7 @@ import { FooterComponent } from './components/navigation/footer/footer.component
 import { SiteNavComponent } from './components/navigation/site-nav/site-nav.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { PageComponent } from './components/pages/page/page.component';
-import { LoginComponent } from './components/pages/login/login.component';
+import { LoginComponent } from './components/pages/landing/login/login.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
 import { TopNavPageComponent } from './components/navigation/top-nav-page/top-nav-page.component';
 import { AccountComponent } from './components/pages/account/account.component';
@@ -27,6 +27,11 @@ import { ProdRequestComponent } from './components/pages/home/prod-request/prod-
 import { ManageTableComponent } from './components/pages/home/manage-table/manage-table.component';
 import { ManageAppComponent } from './components/pages/home/manage-app/manage-app.component';
 import { DeleteConfirmComponent } from './components/pages/home/manage-app/delete-confirm/delete-confirm.component';
+import { SignupformComponent } from './components/pages/landing/signupform/signupform.component';
+import { LoginFullComponent } from './components/pages/landing/login-full/login-full.component';
+import { LinkAccountsComponent } from './components/pages/landing/link-accounts/link-accounts.component';
+import { OrgSelectComponent } from './components/pages/landing/org-select/org-select.component';
+import { OrgCodeComponent } from './components/pages/landing/org-code/org-code.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +52,12 @@ import { DeleteConfirmComponent } from './components/pages/home/manage-app/delet
     ProdRequestComponent,
     ManageTableComponent,
     ManageAppComponent,
-    DeleteConfirmComponent
+    DeleteConfirmComponent,
+    SignupformComponent,
+    LoginFullComponent,
+    LinkAccountsComponent,
+    OrgSelectComponent,
+    OrgCodeComponent
   ],
   imports: [
     BrowserModule,
