@@ -1,0 +1,18 @@
+<div class="login">
+    <div class="login__card card card--depth-4">
+        <div class="card__header">
+            <h3 class="login__heading">Login or Sign Up to Access</h3>
+            <span class="login__sub-heading">Enter your email address to login or create an account.</span>
+        </div>
+        <div class="card__body">
+            <form class="login__form-element" action="">
+                <div class="form__group">
+                    <input class="form__element" type="text" id="formUsername" placeholder="Email Address" value="test@emailaddress.com">
+                </div>
+            </form>
+        </div>
+        <div class="card__footer">
+            <a class="btn btn--primary btn--expanded" [routerLink]="['/signup', { outlets: { login: ['login-full'] } }]">Continue</a>
+        </div>
+    </div>
+</div>

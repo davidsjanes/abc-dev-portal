@@ -1,0 +1,29 @@
+@import '../login/login.component.scss';
+
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-form {
+    width: 100%;
+    max-width: 80rem;
+}
+
+.form {
+    &__section {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .form {
+        &__section {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+}

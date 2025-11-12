@@ -1,0 +1,31 @@
+<div class="login org-code">
+    <div class="login__card card card--depth-4">
+        <div class="card__header">
+            <h3 class="login__heading">Complete Registration</h3>
+            <span class="login__sub-heading">Enter the 6 digit code for your organization and create a password.</span>
+        </div>
+        <div class="card__body">
+            <form action="" class="form org-code__form">
+                <div class="form__group org-code__code">
+                    <input class="org-code__element" type="number" min="1" max="9" placeholder="0">
+                    <input class="org-code__element" type="number" min="1" max="9" placeholder="0">
+                    <input class="org-code__element" type="number" min="1" max="9" placeholder="0">
+                    <input class="org-code__element" type="number" min="1" max="9" placeholder="0">
+                    <input class="org-code__element" type="number" min="1" max="9" placeholder="0">
+                    <input class="org-code__element" type="number" min="1" max="9" placeholder="0">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formPassword">Password</label>
+                    <input class="form__element" type="password" id="formPassword" placeholder="Password">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="formConfirmPassword">Confirm Password</label>
+                    <input class="form__element" type="password" id="formConfirmPassword" placeholder="Password">
+                </div>
+            </form>
+        </div>
+        <div class="card__footer">
+             <a class="btn btn--primary btn--expanded" [routerLink]="['/signup', { outlets: { login: ['org-form'] } }]">Connect and Sign In</a>
+        </div>
+    </div>
+</div>
