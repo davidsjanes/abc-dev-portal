@@ -1,0 +1,30 @@
+<div class="page admin">
+    <div class="page__container">
+        <div class="page__header home">
+            <h1>Application Administration</h1>
+        </div>
+        <div class="page__body">
+            <div class="page__filters">
+                <div class="form__group admin__search">
+                    <div class="form__add-on">
+                        <input class="form__element" type="text" id="formSearch" placeholder="Search Applications...">
+                        <span class="form__append">
+                            <span class="icon">
+                                <img src="../../../assets/icons/search.svg" alt="Search">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                 <div class="form__group admin__filter">
+                    <select class="form__element" id="formFilter">
+                        <option>All Statuses</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Etc. Etc. Etc.</option>
+                    </select>
+                </div>
+            </div>
+            <app-admin-table></app-admin-table>
+        </div>
+    </div>
+</div>

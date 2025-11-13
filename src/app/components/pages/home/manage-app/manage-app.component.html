@@ -1,6 +1,5 @@
 <div class="manage-app">
     <form class="manage-app__form" action="">
-
         <div class="form__group">
             <label class="form__label" for="formClientID">Client ID</label>
             <div class="form__add-on">
@@ -24,6 +23,9 @@
             </div>
             <img *ngIf="!secretIsVisible" class="icon icon--eye" src="../../../assets/icons/eye.svg" alt="Copy" (click)="toggleSecret()">
             <img *ngIf="secretIsVisible" class="icon icon--eye" src="../../../assets/icons/eye-slash.svg" alt="Copy" (click)="toggleSecret()">
+        </div>
+        <div class="form__group">
+            <button class="btn btn--small btn--expanded btn--primary">Production Request</button>
         </div>
 
         <div class="divider"></div>
@@ -71,5 +73,5 @@
             <button class="btn btn--text u-p-0">Add Additional</button>
         </div>
     </form>
-    <button class="btn btn--small btn--expanded btn--danger" (click)="openDeleteConfirm()">Delete App</button>
+    <button class="btn btn--small btn--expanded btn--danger btn--outline" (click)="openDeleteConfirm()">Delete Application</button>
 </div>

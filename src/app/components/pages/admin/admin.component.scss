@@ -1,0 +1,13 @@
+@import '../pages-shared.scss';
+
+.admin {
+    gap: 2rem;
+    &__filter {
+        width: 100%;
+        max-width: 21rem;
+    }
+    &__search {
+        width: 100%;
+        max-width: 30rem;
+    }
+}

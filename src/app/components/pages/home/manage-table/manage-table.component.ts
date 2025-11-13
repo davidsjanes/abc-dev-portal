@@ -12,7 +12,7 @@ export class ManageTableComponent {
   constructor(private SlideoutService: SlideoutService) {}
 
   openManageApp() {
-    this.SlideoutService.open(ManageAppComponent, ['manage-app'], ['Manage App'], ['Save Changes'], ['content'], ['right'], ['below'], false, true, true, false);
+    this.SlideoutService.open(ManageAppComponent, ['manage-app'], ['Manage Application'], ['Save Changes'], ['content'], ['right'], ['below'], false, true, true, false);
   }
 
 }
