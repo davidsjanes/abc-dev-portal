@@ -5,24 +5,3 @@
     flex-direction: column;
     gap: 2rem;
 }
-
-.divider {
-    height: 1px;
-    width: 100%;
-    background-color: #e7e9ec;
-    margin: 2rem 0 1.5rem 0;
-}
-
-.icon {
-    width: 2.2rem;
-    height: 2.2rem;
-    cursor: pointer;
-    &--eye {
-        position: absolute;
-        bottom: 1.8rem;
-        right: 5rem;
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-}
-

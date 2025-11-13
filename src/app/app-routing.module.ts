@@ -10,6 +10,7 @@ import { LinkAccountsComponent } from './components/pages/landing/link-accounts/
 import { OrgSelectComponent } from './components/pages/landing/org-select/org-select.component';
 import { OrgCodeComponent } from './components/pages/landing/org-code/org-code.component';
 import { SignupformComponent } from './components/pages/landing/signupform/signupform.component';
+import { AdminComponent } from './components/pages/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -70,6 +71,11 @@ const routes: Routes = [
         path: 'home',
         outlet: 'page',
         component: HomeComponent
+      },
+      {
+        path: 'admin',
+        outlet: 'page',
+        component: AdminComponent
       },
       {
         path: 'account',

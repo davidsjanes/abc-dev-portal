@@ -32,6 +32,10 @@ import { LoginFullComponent } from './components/pages/landing/login-full/login-
 import { LinkAccountsComponent } from './components/pages/landing/link-accounts/link-accounts.component';
 import { OrgSelectComponent } from './components/pages/landing/org-select/org-select.component';
 import { OrgCodeComponent } from './components/pages/landing/org-code/org-code.component';
+import { AdminComponent } from './components/pages/admin/admin.component';
+import { AdminTableComponent } from './components/pages/admin/admin-table/admin-table.component';
+import { AdminManageAppComponent } from './components/pages/admin/admin-manage-app/admin-manage-app.component';
+import { RejectAppComponent } from './components/pages/admin/admin-manage-app/reject-app/reject-app.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,11 @@ import { OrgCodeComponent } from './components/pages/landing/org-code/org-code.c
     LoginFullComponent,
     LinkAccountsComponent,
     OrgSelectComponent,
-    OrgCodeComponent
+    OrgCodeComponent,
+    AdminComponent,
+    AdminTableComponent,
+    AdminManageAppComponent,
+    RejectAppComponent
   ],
   imports: [
     BrowserModule,

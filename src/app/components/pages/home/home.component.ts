@@ -14,7 +14,7 @@ export class HomeComponent {
   constructor(private SlideoutService: SlideoutService) {}
 
   openNewApp() {
-    this.SlideoutService.open(NewAppComponent, ['new-app'], ['Create New App'], ['Create App'], ['content'], ['right'], ['below'], false, true, true, false);
+    this.SlideoutService.open(NewAppComponent, ['new-app'], ['Create New App'], ['Create App'], ['nav'], ['left'], ['below'], false, true, true, false);
   }
 
   openProductionRequest() {
