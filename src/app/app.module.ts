@@ -36,6 +36,11 @@ import { AdminComponent } from './components/pages/admin/admin.component';
 import { AdminTableComponent } from './components/pages/admin/admin-table/admin-table.component';
 import { AdminManageAppComponent } from './components/pages/admin/admin-manage-app/admin-manage-app.component';
 import { RejectAppComponent } from './components/pages/admin/admin-manage-app/reject-app/reject-app.component';
+import { OrganizationComponent } from './components/pages/organization/organization.component';
+import { UsersTableComponent } from './components/pages/organization/users-table/users-table.component';
+import { ManageUserComponent } from './components/pages/organization/manage-user/manage-user.component';
+import { RemoveUserComponent } from './components/pages/organization/remove-user/remove-user.component';
+import { InviteUserComponent } from './components/pages/organization/invite-user/invite-user.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +70,12 @@ import { RejectAppComponent } from './components/pages/admin/admin-manage-app/re
     AdminComponent,
     AdminTableComponent,
     AdminManageAppComponent,
-    RejectAppComponent
+    RejectAppComponent,
+    OrganizationComponent,
+    UsersTableComponent,
+    ManageUserComponent,
+    RemoveUserComponent,
+    InviteUserComponent
   ],
   imports: [
     BrowserModule,

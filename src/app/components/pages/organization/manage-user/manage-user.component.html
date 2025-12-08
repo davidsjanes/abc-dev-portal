@@ -1,0 +1,24 @@
+<div class="manage-user">
+    <form class="manage-user__form" action="">
+        <div class="form__group">
+            <label class="form__label" for="formUserName">Username</label>
+            <input class="form__element" disabled type="text" id="formUserName" placeholder="Application Name" value="david.janes@abcsupply.com">
+        </div>
+        <div class="manage-user__permissions">
+            <label class="form__label">Permissions</label>
+            <div class="toggle__group">
+            <div class="toggle__item">
+                <input class="toggle__input" type="checkbox" checked value id="toggle1">
+                <label class="toggle__label" for="toggle1">Administration Capability</label>
+                <div aria-hidden="true" class="toggle__switch">
+                    <div class="toggle__marker"></div>
+                </div>
+            </div>
+        </div> 
+        </div>
+    </form>
+
+    <div class="manage-user__actions">
+        <button class="btn btn--small btn--expanded btn--danger btn--outline" (click)="openRemoveConfirm()">Remove User</button>
+    </div>
+</div>

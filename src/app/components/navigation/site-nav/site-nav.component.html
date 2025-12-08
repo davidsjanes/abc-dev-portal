@@ -10,6 +10,16 @@
         </a>
     </li>
     <li class="site-nav__item">
+        <a class="site-nav__link" [routerLink]="['/page', { outlets: { page: ['org'] } }]" routerLinkActive="is-active" ariaCurrentWhenActive="page">
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/building-white.svg" alt="Organization">
+                </span>
+                <span class="site-nav__text">Organization</span>
+            </div>
+        </a>
+    </li>
+    <li class="site-nav__item">
         <a class="site-nav__link" [routerLink]="['/page', { outlets: { page: ['account'] } }]" routerLinkActive="is-active" ariaCurrentWhenActive="page">
             <div class="site-nav__group">
                 <span class="site-nav__icon">
