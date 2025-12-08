@@ -1,0 +1,9 @@
+@import '../pages-shared.scss';
+
+.organization {
+    &__search {
+        width: 100%;
+        max-width: 30rem;
+    }
+    gap: 2rem;
+}
